@@ -1,0 +1,269 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.direction-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.direction-btn:hover {
+    background: #0056b3;
+}
+
+.direction-btn.selected,
+.quiz-type-btn.selected {
+    background: #28a745;
+    color: white;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+
+#redo-progress {
+    margin: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+#resume-redo-wrong-answers {
+    background: #ff5722;
+    color: white;
+    font-weight: bold;
+}
+
+#resume-redo-wrong-answers:hover {
+    background: #e64a19;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+p {
+    font-size: 18px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+#pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #f4f4f9;
+    cursor: pointer;
+}
+
+#pagination button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+#pagination button.current-page {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: default;
+}
+/* 新增統一表格樣式 */
+.word-list, .record-list {
+    display: table;
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.word-list-item, .record-list-item {
+    display: table-row;
+}
+
+.word-list-item span, .record-list-item span {
+    display: table-cell;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.word-list-item span:first-child, .record-list-item span:first-child {
+    font-weight: bold;
+}
+
+.word-list-item span:last-child, .record-list-item span:last-child {
+    text-align: right;
+}
+
+.delete-btn {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff4d4d;
+    color: white;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #ff1a1a;
+}
+
+/* 分頁按鈕樣式與單字庫一致 */
+#pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+.choice-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #007bff; /* 藍色背景 */
+    color: white; /* 白色文字 */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.choice-btn:hover {
+    background-color: #0056b3; /* 深藍色背景 */
+}
+
+#options-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quiz-type-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.quiz-type-btn:hover {
+    background: #0056b3;
+}
+
+.quiz-type-btn.selected {
+    background: #28a745;
+    color: white;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+/* ✅ 手機版優化：防止內容超出螢幕，保持按鈕可見 */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    height: auto;
+    align-items: flex-start;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 0;
+  }
+
+  .choice-btn, .direction-btn, .quiz-type-btn, button {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  input {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  #options-container {
+    width: 100%;
+  }
+
+  .word-list, .record-list {
+    display: block;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .word-list-item, .record-list-item {
+    display: block;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+
+  .word-list-item span, .record-list-item span {
+    display: block;
+    padding: 5px 0;
+  }
+}

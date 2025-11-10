@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>選擇題系統首頁</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 350px;
+    }
+
+    .quiz-list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .quiz-option {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+    }
+
+    .quiz-option input[type="checkbox"] {
+      transform: scale(1.3);
+      cursor: pointer;
+    }
+
+    .button {
+      margin-top: 25px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>選擇題練習系統</h1>
+    <p>請選擇要使用的題庫（可複選）</p>
+    <form id="quiz-selection-form">
+      <div class="quiz-list">
+        <label class="quiz-option">
+          <input type="checkbox" name="quizzes" value="network_quiz.json">
+          網路與資訊科技期中考
+        </label>
+<!--         <label class="quiz-option">
+          <input type="checkbox" name="quizzes" value="mid.json">
+          期中考題庫（mid.json）
+        </label> -->
+        <!-- <label class="quiz-option">
+          <input type="checkbox" name="quizzes" value="second.json">
+          第二次小考題庫（second.json）
+        </label>
+        <label class="quiz-option">
+          <input type="checkbox" name="quizzes" value="final.json">
+          期末模擬題庫（final.json）
+        </label>
+         -->
+      </div>
+      <button class="button" type="submit">開始練習</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('quiz-selection-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const selected = Array.from(document.querySelectorAll('input[name="quizzes"]:checked'))
+        .map(cb => cb.value);
+
+      if (selected.length === 0) {
+        alert("請至少選擇一個題庫！");
+        return;
+      }
+
+      localStorage.setItem('selectedQuizzes', JSON.stringify(selected));
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

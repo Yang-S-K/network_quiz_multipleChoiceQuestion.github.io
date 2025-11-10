@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>選擇題練習系統</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- 首頁 -->
+        <div id="home-page">
+            <h1>選擇題練習系統</h1>
+            <div>
+                <label for="question-limit">選擇題數（空白為全部）:</label>
+                <input type="number" id="question-limit" min="1" placeholder="全部" />
+            </div>
+            <button id="start-quiz">開始測驗</button>
+            <button id="view-words-home">查看題庫</button>
+            <button id="view-records-home">查看測驗紀錄</button>
+            <div>
+                <label for="upload-database">上傳題庫檔:</label>
+                <input type="file" id="upload-database" accept=".json" />
+            </div>
+        </div>
+
+        <!-- 測驗頁 -->
+        <div id="quiz-page" style="display: none;">
+            <button id="back-to-home">返回主頁</button>
+            <div id="total-timer">總計時: 0 秒</div>
+            <div id="progress-container" style="width: 100%; background: #eee; height: 16px; border-radius: 8px; margin-bottom: 10px;">
+            <div id="progress-bar" style="width: 0%; height: 100%; background: #4caf50; border-radius: 8px;"></div>
+            </div>
+            <div id="content"></div>
+        </div>
+
+        <!-- 題庫查看頁 -->
+        <div id="word-bank-page" style="display: none;">
+            <button id="back-to-home-from-word-bank">返回主頁</button>
+            <h2>題庫內容</h2>
+            <input type="text" id="search-input" placeholder="搜尋關鍵字…" />
+            <div id="word-list"></div>
+            <div id="word-pagination"></div>
+
+            <div id="word-bank-content"></div>
+        </div>
+
+        <!-- 紀錄頁 -->
+        <div id="record-page" style="display: none;">
+            <button id="back-to-home-from-record">返回主頁</button>
+            <div id="record-content"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
