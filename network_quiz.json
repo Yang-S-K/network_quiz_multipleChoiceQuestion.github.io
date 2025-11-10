@@ -538,5 +538,130 @@
       "否"
     ],
     "answer": 1
+  },
+    {
+    "question": "下列何者屬於電腦網路發展歷程中最早出現的技術？",
+    "options": ["ARPANET（1967）", "Ethernet（1973）", "TCP/IP（1982）", "HTML（1989）"],
+    "answer": 0
+  },
+  {
+    "question": "IEEE 802.11（無線區域網路標準）提出於下列哪個年代？",
+    "options": ["1990 年代", "2000 年代", "2010 年代", "1980 年代"],
+    "answer": 0
+  },
+  {
+    "question": "下列關於對等式（P2P）網路的敘述何者正確？",
+    "options": ["節點可同時充當資源提供者與使用者", "必須架設專屬伺服器", "集中式管理較強", "較適合小規模或臨時性分享"],
+    "answer": [0, 3]
+  },
+  {
+    "question": "依『傳輸資料位元數多寡』分類，下列敘述何者正確？",
+    "options": ["並列傳輸適合長距離且抗干擾佳", "序列傳輸一次傳 1 位元，較適合長距離連接", "並列傳輸一次可傳多位元，常見於短距離匯流排", "序列傳輸在短距離的成本通常高於並列傳輸"],
+    "answer": [1, 2]
+  },
+  {
+    "question": "資料交換技術中，何者需要在通訊前先建立專屬通道？",
+    "options": ["電路交換", "訊息交換", "分封（封包）交換", "光纖交換"],
+    "answer": 0
+  },
+  {
+    "question": "下列哪一種設備在資料鏈結層運作並依 MAC 位址進行轉送？",
+    "options": ["集線器（Hub）", "交換器（Switch）", "路由器（Router）", "閘道器（Gateway）"],
+    "answer": 1
+  },
+  {
+    "question": "IEEE 802 標準對應何者正確？",
+    "options": ["802.11 → 無線區域網路（WLAN）", "802.15 → 無線都會網路（WMAN）", "802.3 → 無線個人網路（WPAN）", "802.16 → 乙太網路（Ethernet）"],
+    "answer": 0
+  },
+  {
+    "question": "ZigBee 主要應用領域為何？",
+    "options": ["家庭自動化/安全", "工業與環境控制", "個人醫療照護", "大型骨幹網路長距離傳輸"],
+    "answer": [0, 1, 2]
+  },
+  {
+    "question": "NFC 的點對點模式遵循下列何種標準？",
+    "options": ["ISO/IEC 18092", "ISO/IEC 14443 Type A", "ISO/IEC 7816", "IEEE 802.11ac"],
+    "answer": 0
+  },
+  {
+    "question": "下列何者皆屬於 WPAN（無線個人區域網路）技術？",
+    "options": ["Bluetooth", "UWB（超寬頻）", "ZigBee", "NFC"],
+    "answer": [0, 1, 2, 3]
+  },
+  {
+    "question": "在家庭/小型辦公網路中，終端裝置通常由路由器分配到哪一種類型的 IP 位址？",
+    "options": ["公有 IP", "私有 IP"],
+    "answer": 1
+  },
+  {
+    "question": "子網路遮罩（Subnet Mask）的主要用途為何？",
+    "options": ["用來界定 IP 位址中的網路與主機部分", "提供加密保護資料", "決定封包的傳輸層協定", "轉換網域名稱與 IP"],
+    "answer": 0
+  },
+  {
+    "question": "Windows 平台上可用來查看本機 IP 設定的指令為何？",
+    "options": ["ipconfig", "nslookup", "tracert", "netstat"],
+    "answer": 0
+  },
+  {
+    "question": "下列哪個工具可用以檢測封包到目的地主機所經過的路由節點路徑？",
+    "options": ["ping", "tracert（或 traceroute）", "ipconfig", "arp"],
+    "answer": 1
+  },
+  {
+    "question": "URL 的基本組成包含哪些？",
+    "options": ["通訊協定（scheme）", "主機名稱（host/domain）", "路徑/查詢參數（path/query）", "以上皆是"],
+    "answer": 3
+  },
+  {
+    "question": "寬頻上網方式之對應敘述何者正確？",
+    "options": ["ADSL 使用電話銅線且上下行不對稱", "Cable Modem 使用有線電視的同軸電纜", "光纖上網（FTTH）提供最高傳輸速率"],
+    "answer": [0, 1, 2]
+  },
+  {
+    "question": "架設無線網路上網通常需要哪些設備？",
+    "options": ["無線基地台（AP）", "無線網卡（USB/PCIe）", "交換式集線器（Layer2 Switch）", "光碟機"],
+    "answer": [0, 1]
+  },
+  {
+    "question": "在區域網路中，要讓其他電腦讀取你機器的檔案，下列哪些方法可行？",
+    "options": ["開啟『公用資料夾』", "針對特定資料夾設定『分享』", "進入 BIOS 開啟 SATA 模式", "格式化硬碟"],
+    "answer": [0, 1]
+  },
+  {
+    "question": "使用遠端桌面連線前，下列哪個前置條件最關鍵？",
+    "options": ["在被控端啟用並允許遠端桌面連線", "新增硬碟分割區", "安裝光碟燒錄軟體", "關閉所有防毒軟體"],
+    "answer": 0
+  },
+  {
+    "question": "HTML 屬於下列何種類型的語言？",
+    "options": ["標記語言（Markup Language）", "編譯式程式語言", "作業系統命令語言", "資料庫查詢語言"],
+    "answer": 0
+  },
+  {
+    "question": "下列哪些屬於常見的網頁瀏覽器？",
+    "options": ["Google Chrome", "Mozilla Firefox", "Microsoft Edge", "Adobe Illustrator"],
+    "answer": [0, 1, 2]
+  },
+  {
+    "question": "響應式網頁設計（RWD）的主要目標為何？",
+    "options": ["讓同一網站可自適應各種裝置與螢幕尺寸", "強化雙因子登入流程", "提升網路頻寬", "減少網站圖片檔案大小到 0"],
+    "answer": 0
+  },
+  {
+    "question": "一頁式網站（Single Page/One-Page Website）的典型特徵為何？",
+    "options": ["內容多集中於單一長頁，以捲動瀏覽呈現重點", "必定採用多子網域結構", "一定需要會員登入", "僅適用桌面版瀏覽"],
+    "answer": 0
+  },
+  {
+    "question": "下列哪些屬於前端開發的基本語言？",
+    "options": ["HTML", "CSS", "JavaScript", "SQL"],
+    "answer": [0, 1, 2]
+  },
+  {
+    "question": "下列何者為較新的藍牙規格版本？",
+    "options": ["Bluetooth 1.2", "Bluetooth 2.1+EDR", "Bluetooth 4.0", "Bluetooth 5.3"],
+    "answer": 3
   }
 ]
